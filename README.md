@@ -9,3 +9,10 @@
 
 Перед первым запуском также потребуется доустановка модуля 'webp-converter/cwebp':
 ### `npm install webp-converter@2.2.3 --save-dev`
+
+
+"path-autocomplete.pathMappings": {
+        "@img": "${folder}/src/img",
+        "@scss": "${folder}/src/scss",
+        "@js": "${folder}/src/js",
+    }

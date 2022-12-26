@@ -1,0 +1,44 @@
+
+.container {
+	margin: 0 auto;
+}
+
+.header {
+	width: 100%;
+	position: fixed;
+	left: 0px;
+	top: 0px;
+	background-color: #000000;
+
+	// .header__inner
+
+	&__inner {
+		padding: 0px 15px;
+	}
+}
+
+.menu {
+
+	// .menu__list
+
+	&__list {
+		display: flex;
+		justify-content: space-between;
+		
+	}
+
+	// .menu__list-item
+
+	&__list-item {
+		padding: 15px 0px;
+	}
+
+	// .menu__list-link
+
+	&__list-link {
+		color: #ffff;
+		font-weight: 400;
+		text-transform: uppercase;
+		letter-spacing: 1.3px;
+	}
+}

@@ -1,0 +1,36 @@
+.promo {
+	margin-top: 50px;
+	background: url('@img/promo/promo-bg.jpeg') 0 0/no-repeat cover;
+	width: 100%;
+	height: 500px;
+	border: red solid 1px;
+	// .promo__inner
+
+	&__inner {
+	}
+
+	// .promo__title
+
+	&__title {
+	}
+
+	// .promo__text
+
+	&__text {
+	}
+
+	// .promo__border
+
+	&__border {
+	}
+
+	// .promo__link
+
+	&__link {
+	}
+}
+
+.border-left {
+}
+.border-right {
+}
