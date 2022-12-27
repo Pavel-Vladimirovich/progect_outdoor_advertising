@@ -18,11 +18,11 @@ export const scss = () => {
                 message: "Error: <%= error.message %>",
             }))
         )
-        .pipe(app.plugins.replace(/@img\//g, '../img/')) // заменяем @img на правильный путь к папке
         .pipe(sass({
             outputStyle: 'expanded'
             })
         )
+        .pipe(app.plugins.replace(/@img\//g, '../img/')) // заменяем @img на правильный путь к папке
         .pipe(app.plugins.if(
             app.isBuild, groupCssMediaQueries())
         )

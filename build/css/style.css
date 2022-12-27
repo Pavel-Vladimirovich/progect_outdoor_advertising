@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -339,6 +340,8 @@ template {
 
 * {
   box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
 }
 
 html {
@@ -349,8 +352,7 @@ html {
 ul,
 li,
 ol {
-  margin: 0px;
-  padding: 0px;
+  list-style-type: none;
 }
 
 a {
@@ -362,9 +364,10 @@ a {
 }
 
 body {
-  font-family: OpenSans;
+  font-family: OpenSans, OpenSans-Italic;
   font-weight: 400;
   font-size: 1rem;
+  line-height: 1.6;
 }
 
 .container {
@@ -435,6 +438,7 @@ body {
 .header {
   width: 100%;
   position: fixed;
+  z-index: 22;
   left: 0px;
   top: 0px;
   background-color: #000000;
@@ -458,9 +462,81 @@ body {
 }
 
 .promo {
-  margin-top: 50px;
-  background: url("@img/promo/promo-bg.jpeg") 0 0/no-repeat cover;
-  width: 100%;
-  height: 500px;
-  border: red solid 1px;
+  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../img/promo/promo-bg.jpeg");
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 700px;
+  position: relative;
+  padding-top: 1px;
+}
+.promo__inner {
+  color: #ffffff;
+  max-width: 836px;
+  min-height: 333px;
+  height: auto;
+  margin: 216px auto;
+  position: relative;
+}
+.promo__item {
+  text-align: center;
+}
+.promo__item-title {
+  position: relative;
+  font-weight: 700;
+  font-size: 4.5rem;
+  line-height: 1.1;
+  padding: 0px 35px;
+}
+.promo__item-text {
+  max-width: 579px;
+  padding: 0px 10px 0px 10px;
+  margin: 0 auto;
+  word-wrap: break-word;
+  font-family: OpenSans-Italic;
+}
+.promo__item-border {
+  border-color: #ffffff;
+  border-width: 6px;
+  border-style: solid;
+}
+.promo__item-link {
+  display: block;
+  margin-top: -20px;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 3px;
+  color: #ffce3e;
+}
+
+.border-left {
+  width: 19px;
+  height: 252px;
+  margin: -180px auto 0 0;
+  border-right-style: none !important;
+}
+
+.border-right {
+  width: 19px;
+  height: 252px;
+  margin: -250px 0 0 auto;
+  border-left-style: none !important;
+}
+
+.parent {
+  margin: 20%;
+  /* Отступы вокруг элемента */
+  background: #fd0;
+  /* Цвет фона */
+  padding: 1px;
+  /* Поля вокруг текста */
+}
+
+.child {
+  border: 3px solid #666;
+  /* Параметры рамки */
+  padding: 0px;
+  /* Поля вокруг текста */
+  margin: 10px;
+  /* Отступы вокруг */
 }

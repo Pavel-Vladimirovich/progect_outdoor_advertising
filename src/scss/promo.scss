@@ -1,36 +1,106 @@
+// .promo__inner
 .promo {
-	margin-top: 50px;
-	background: url('@img/promo/promo-bg.jpeg') 0 0/no-repeat cover;
-	width: 100%;
-	height: 500px;
-	border: red solid 1px;
+	background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('@img/promo/promo-bg.jpeg');
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 700px;
+	position: relative;
+	padding-top: 1px;
+
 	// .promo__inner
 
 	&__inner {
+		color: $primary_color;
+		max-width: 836px;
+		min-height: 333px;
+		height: auto;
+		margin: 216px auto;
+		// border: red solid 1px;
+		position: relative;
 	}
 
-	// .promo__title
+	// .promo__item
 
-	&__title {
+	&__item {
+		text-align: center;
 	}
 
-	// .promo__text
+	// .promo__item-title
 
-	&__text {
+	&__item-title {
+		position: relative;
+		font-weight: 700;
+		font-size: 4.5rem;
+		line-height: 1.1;
+		padding: 0px 35px;
+		// border: #fd0 1px solid;
 	}
 
-	// .promo__border
+	// .promo__item-text
 
-	&__border {
+	&__item-text {
+		max-width: 579px;
+		padding: 0px 10px 0px 10px;
+		margin: 0 auto;
+		word-wrap: break-word;
+		font-family: OpenSans-Italic;
+
 	}
 
-	// .promo__link
+	// .promo__item-border
 
-	&__link {
+	&__item-border {
+
+		border-color: #ffffff;
+		border-width: 6px;
+		border-style: solid;
+
+	}
+
+	// .promo__item-link
+
+	&__item-link {
+		display: block;
+		margin-top: -20px;
+		text-transform: uppercase;
+		font-weight: 700;
+		letter-spacing: 3px;
+		color: #ffce3e;
 	}
 }
+
+.container {}
 
 .border-left {
+	width: 19px;
+	height: 252px;
+	margin: -180px auto 0 0;
+	border-right-style: none !important;
 }
+
 .border-right {
+	width: 19px;
+	height: 252px;
+	margin: -250px 0 0 auto;
+	border-left-style: none !important;
+}
+
+
+.parent {
+	margin: 20%;
+	/* Отступы вокруг элемента */
+	background: #fd0;
+	/* Цвет фона */
+	padding: 1px;
+	/* Поля вокруг текста */
+}
+
+.child {
+	border: 3px solid #666;
+	/* Параметры рамки */
+	padding: 0px;
+	/* Поля вокруг текста */
+	margin: 10px;
+	/* Отступы вокруг */
 }
