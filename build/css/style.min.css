@@ -344,9 +344,13 @@ template {
   padding: 0px;
 }
 
-html {
-  font-size: 16px;
-  min-height: 100%;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0px;
 }
 
 ul,
@@ -363,6 +367,11 @@ a {
   text-decoration: none;
 }
 
+html {
+  font-size: 16px;
+  min-height: 100%;
+}
+
 body {
   font-family: OpenSans, OpenSans-Italic;
   font-weight: 400;
@@ -371,7 +380,8 @@ body {
 }
 
 .container {
-  max-width: 1140px;
+  max-width: 1170px;
+  padding: 0px 15px;
   margin: 0 auto;
 }
 
@@ -431,10 +441,6 @@ body {
   font-weight: 400;
   font-style: normal;
 }
-.container {
-  margin: 0 auto;
-}
-
 .header {
   width: 100%;
   position: fixed;
@@ -444,56 +450,71 @@ body {
   background-color: #000000;
 }
 .header__inner {
-  padding: 0px 15px;
+  padding: 15px 0px;
+  display: flex;
+  align-items: center;
+}
+.header__phone {
+  margin-left: auto;
+  color: #ffffff;
 }
 
+.menu {
+  max-width: 100%;
+}
 .menu__list {
   display: flex;
-  justify-content: space-between;
 }
 .menu__list-item {
-  padding: 15px 0px;
+  padding: 0px 20px;
+  transition: all 0.3s ease-in-out;
 }
 .menu__list-link {
   color: white;
   font-weight: 400;
-  text-transform: uppercase;
   letter-spacing: 1.3px;
+  padding: 0px 4px;
+  transition: all 0.3s ease-in-out;
+}
+.menu__list-link:hover {
+  border-bottom: #ffffff solid 1px;
 }
 
 .promo {
-  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../img/promo/promo-bg.jpeg");
+  background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../img/promo/promo-baner.webp");
   background-position: 50% 50%;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 700px;
-  position: relative;
-  padding-top: 1px;
 }
 .promo__inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding-top: 50px;
+}
+.promo__item {
   color: #ffffff;
   max-width: 836px;
   min-height: 333px;
   height: auto;
-  margin: 216px auto;
-  position: relative;
-}
-.promo__item {
   text-align: center;
 }
 .promo__item-title {
-  position: relative;
-  font-weight: 700;
-  font-size: 4.5rem;
-  line-height: 1.1;
   padding: 0px 35px;
+  margin-bottom: 40px;
+}
+.promo__item-title h1 {
+  font-weight: 700;
+  font-size: clamp(2.5rem, 1.9286rem + 2.8571vw, 4.5rem);
+  line-height: 1.1;
 }
 .promo__item-text {
   max-width: 579px;
   padding: 0px 10px 0px 10px;
   margin: 0 auto;
-  word-wrap: break-word;
   font-family: OpenSans-Italic;
+  font-size: clamp(0.9rem, 0.8714rem + 0.1429vw, 1rem);
 }
 .promo__item-border {
   border-color: #ffffff;
@@ -507,6 +528,7 @@ body {
   font-weight: 700;
   letter-spacing: 3px;
   color: #ffce3e;
+  font-size: clamp(0.9rem, 0.8714rem + 0.1429vw, 1rem);
 }
 
 .border-left {

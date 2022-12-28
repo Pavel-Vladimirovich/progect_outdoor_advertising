@@ -1,40 +1,43 @@
 // .promo__inner
 .promo {
-	background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('@img/promo/promo-bg.jpeg');
+	background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('@img/promo/promo-baner.webp');
 	background-position: 50% 50%;
 	background-repeat: no-repeat;
 	background-size: cover;
-	height: 700px;
-	position: relative;
-	padding-top: 1px;
 
 	// .promo__inner
 
 	&__inner {
-		color: $primary_color;
-		max-width: 836px;
-		min-height: 333px;
-		height: auto;
-		margin: 216px auto;
-		// border: red solid 1px;
-		position: relative;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		min-height: 100vh;
+		padding-top: 50px;
 	}
 
 	// .promo__item
 
 	&__item {
+		color: $primary_color;
+		max-width: 836px;
+		min-height: 333px;
+		height: auto;
 		text-align: center;
 	}
 
 	// .promo__item-title
 
 	&__item-title {
-		position: relative;
-		font-weight: 700;
-		font-size: 4.5rem;
-		line-height: 1.1;
+		h1 {
+			font-weight: 700;
+			font-size: clamp(2.5rem, 1.9286rem + 2.8571vw, 4.5rem);
+			line-height: 1.1;
+		}
+		h3{
+
+		}
 		padding: 0px 35px;
-		// border: #fd0 1px solid;
+		margin-bottom: 40px;
 	}
 
 	// .promo__item-text
@@ -43,15 +46,14 @@
 		max-width: 579px;
 		padding: 0px 10px 0px 10px;
 		margin: 0 auto;
-		word-wrap: break-word;
 		font-family: OpenSans-Italic;
+		font-size: clamp(0.9rem, 0.8714rem + 0.1429vw, 1rem);
 
 	}
 
 	// .promo__item-border
 
 	&__item-border {
-
 		border-color: #ffffff;
 		border-width: 6px;
 		border-style: solid;
@@ -67,10 +69,10 @@
 		font-weight: 700;
 		letter-spacing: 3px;
 		color: #ffce3e;
+		font-size: clamp(0.9rem, 0.8714rem + 0.1429vw, 1rem);
 	}
 }
 
-.container {}
 
 .border-left {
 	width: 19px;
