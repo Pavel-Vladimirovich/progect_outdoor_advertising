@@ -1,3 +1,6 @@
+body._lock {
+    overflow: hidden;
+}
 .header {
 	width: 100%;
 	position: fixed;
@@ -5,97 +8,139 @@
 	left: 0px;
 	top: 0px;
 	background-color: #000000;
-
-	// .header__inner
-
-	&__inner {
-		padding: 15px 0px;
-		display: flex;
-		align-items: center;
-	}
-
-	// .header__phone
-
-	&__phone {
-		margin-left: auto;
-		color: $primary_color;
-		// border: red solid 1px;
-		// background: url('@img/call_FILL0_wght400_GRAD0_opsz48.svg')0 0px/contain no-repeat;
-	}
+}
+.header__container{
+    display: flex;
+    align-items: center;
+    height: 50px;
+    @media (max-width:768px) {
+        justify-content: end;
+    }
+}
+.header__menu {
+    
+    @media (min-width:767px) {
+        width: 100%;
+    }
 }
 
-.menu {
-	max-width: 100%;
-	// border: red solid 1px;
-	// .menu__list
+.menu__icon {
+    display: none;
 
-	&__list {
-		display: flex;
-		// justify-content: space-between;
-		// border: rgb(0, 81, 255) solid 2px;
-	}
+    @media (max-width:768px) {
+        display: block;
+        position: relative;
+        z-index: 5;
+        width: 30px;
+        height: 18px;
+        cursor: pointer;
 
-	// .menu__list-item
+        & span,
+        &::after,
+        &::before {
+            position: absolute;
+            left: 0;
+            height: 10%;
+            width: 100%;
+            transition: all .3 ease 0;
+            background-color: #fff;
+        }
 
-	&__list-item {
-		padding: 0px 20px;
-		transition: all 0.3s ease-in-out;
-		&:hover {
-			// border-bottom: $primary_color solid 1px;
-		}
+        &::after,
+        &::before {
+            content: " ";
+        }
 
-		// border: rgb(0, 255, 13) solid 1px;
+        &::after {
+            bottom: 0;
+        }
 
-	}
+        &::before {
+            top: 0px;
+        }
 
-	// .menu__list-link
+        & span {
+            top: 50%;
+            transform: scale(1) translate(0px, -50%);
+        }
 
-	&__list-link {
-		color: #ffff;
-		font-weight: 400;
-		letter-spacing: 1.3px;
-		padding: 0px 4px;
-		transition: all 0.3s ease-in-out;
-		&:hover{
-			border-bottom: $primary_color solid 1px;
-		}
-		
-	}
+        &._active span {
+            transform: scale(0) translate(0px, -50%);
+        }
+
+        &._active::before {
+            top: 50%;
+            transform: rotate(-45deg) translate(0px, -50%);
+        }
+
+        &._active::after {
+            bottom: 50%;
+            transform: rotate(45deg) translate(0px, 50%);
+        }
+    }
 }
-// a {
-// 	color: #ffff;
-// 	background-image: linear-gradient(
-// 	  to right,
-// 	  #54b3d6,
-// 	  #54b3d6 50%,
-// 	  #000 50%
-// 	);
-// 	background-size: 200% 100%;
-// 	background-position: -100%;
-// 	display: inline-block;
-// 	padding: 5px 0;
-// 	position: relative;
-// 	-webkit-background-clip: text;
-// 	-webkit-text-fill-color: transparent;
-// 	transition: all 0.3s ease-in-out;
-//   }
-  
-//   a:before{
-// 	content: '';
-// 	background: #54b3d6;
-// 	display: block;
-// 	position: absolute;
-// 	bottom: -3px;
-// 	left: 0;
-// 	width: 0;
-// 	height: 3px;
-// 	transition: all 0.3s ease-in-out;
-//   }
-  
-//   a:hover {
-//    background-position: 0;
-//   }
-  
-//   a:hover::before{
-// 	width: 100%;
-//   }
+
+.menu__body {
+    @media (max-width:768px) {
+        position: fixed;
+        top: -100%;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(32, 37, 39, 0.9);
+        padding: 100px 30px 30px 30px;
+        transition: top .3s ease 0s;
+        overflow: auto;
+
+        &._active {
+            top: 0;
+        }
+
+        &::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 50px;
+            background-color: #000000;
+            z-index: 3;
+        }
+    }
+}
+
+.menu__list {
+    max-width: 100%;
+    @media (min-width:768px) {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+       
+        .menu__list-phone{
+            margin-left: auto;
+        }
+    }
+
+    @media (max-width:768px) {
+        &>li{
+            margin-bottom: 20px;
+        }
+      
+    }
+}
+.menu__list-phone{
+
+}
+.menu__link {
+    color: $primary_color;
+    @media (max-width:768px) {
+        font-size: 1.2rem;
+    }
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
+.menu__phone{
+    color: $primary_color;
+}
